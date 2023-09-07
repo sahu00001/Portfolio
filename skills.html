@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Acquired</title>
+    <style>
+        body {
+            background-image: url("sto.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center; /* Center align text in the body */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh;
+            margin: 0;
+        }
+
+        
+        h2 {
+        font-family: Arial, sans-serif; /* Set the font family */
+        font-size: 30px; /* Set the font size */
+        font-weight: bold; /* Set the font weight to bold */
+        color: #333; /* Set the text color */
+            }
+  
+
+        .container {
+            display: flex; /* Use flexbox to arrange containers horizontally */
+            flex-direction: column;
+            align-items: center; /* Align containers to the top */
+            margin-top: 50px;
+            padding: 20px;
+            gap: 20px; /* Add some spacing between containers */
+            
+        }
+
+        .skill-category {
+            flex: 1; /* Each container takes equal space */
+            text-align: center;
+            cursor: pointer;
+            padding: 20px; /* Increase padding for larger containers */
+            border: 2px solid #333; /* Add a border for better separation */
+            border-radius: 10px; /* Add rounded corners */
+            background-color: #f1f1f1; /* Add a background color */
+            transition: transform 0.3s; /* Add a smooth transition effect */
+            overflow: hidden; /* Hide the overflow to prevent expanding */
+            background-size: cover; /* Ensure the background image covers the container */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            width: 350px;
+            max-width: 80%;
+        }
+
+        .skill-category:hover {
+            transform: scale(1.1); /* Add a scale effect on hover */
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s; /* Add a smooth transition effect */
+        }
+
+        .skills-list li {
+            margin-bottom: 10px;
+        }
+
+        .skill-category.expanded {
+            transform: scale(1.2); /* Make the top container bigger */
+        }
+
+        /* Background images for each category */
+        .skill-category.software {
+            background-image: url("sp.avif");
+        }
+
+        .skill-category.analytics {
+            background-image: url("model.jpeg");
+        }
+
+        .skill-category.web {
+            background-image: url("webd.jpeg");
+        }
+
+        .skill-category.programming {
+            background-image: url("code.avif");
+        }
+    </style>
+</head>
+<body>
+    <h2>SKILLS ACQUIRED</h2>
+    <div class="container">
+        <div class="skill-category programming" onclick="toggleSkills(this)">
+            <h3>Programming</h3>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>R</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+
+        <div class="skill-category analytics" onclick="toggleSkills(this)">
+            <h3>Analytics and Modeling</h3>
+            <ul class="skills-list">
+                <li>Data Wrangling</li>
+                <li>Data Mining</li>
+                <li>Linear and Logistic Regression</li>
+                <li>Random Forests</li>
+                <li>Clustering</li>
+                <li>SVM</li>
+                <li>KNN</li>
+                <li>Statistical Analysis and Modeling</li>
+                <li>Predictive Analytics</li>
+                <li>Text Analytics</li>
+                <li>NLP</li>
+                <li>Cloud Computing</li>
+                <li>Time Series Analysis</li>
+                <li>Web Scraping</li>
+            </ul>
+        </div>
+
+        <div class="skill-category web" onclick="toggleSkills(this)">
+            <h3>Web Development</h3>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Node.js</li>
+                <li>Bootstrap</li>
+            </ul>
+        </div>
+        <div class="skill-category software" onclick="toggleSkills(this)">
+            <h3>Softwares and Platforms</h3>
+            <ul class="skills-list">
+                <li>Tableau</li>
+                <li>Power BI</li>
+                <li>Auto-CAD</li>
+                <li>LaTeX</li>
+                <li>Git version Control</li>
+                <li>Unix</li>
+                <li>AWS</li>
+                <li>Microsoft Azure</li>
+                <li>Google Cloud Platform</li>
+                <li>Microsoft Excel</li>
+                <li>Spreadsheets</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle skills
+        function toggleSkills(element) {
+            // Check if the clicked container is already expanded
+            const isExpanded = element.classList.contains('expanded');
+    
+            // Reset all containers to initial state
+            const containers = document.querySelectorAll('.skill-category');
+            containers.forEach((container) => {
+                container.classList.remove('expanded');
+                // Reset the max-height and overflow for all skill lists
+                const skillsList = container.querySelector('.skills-list');
+                skillsList.style.maxHeight = '0';
+                skillsList.style.overflow = 'hidden';
+            });
+    
+            // If the clicked container was not expanded, expand it
+            if (!isExpanded) {
+                element.classList.add('expanded');
+                const skillsList = element.querySelector('.skills-list');
+                skillsList.style.maxHeight = '1000px';
+                skillsList.style.overflow = 'visible';
+            }
+        }
+    
+        // Close the skill categories when clicking outside
+        document.addEventListener('click', function (event) {
+            const containers = document.querySelectorAll('.skill-category');
+            const clickedOutside = !containers.some((container) =>
+                container.contains(event.target)
+            );
+    
+            if (clickedOutside) {
+                containers.forEach((container) => {
+                    container.classList.remove('expanded');
+                    const skillsList = container.querySelector('.skills-list');
+                    skillsList.style.maxHeight = '0';
+                    skillsList.style.overflow = 'hidden';
+                });
+            }
+        });
+    </script>
+    
+</body>
+</html>

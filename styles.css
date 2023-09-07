@@ -1,0 +1,30 @@
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-slide {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Style the carousel navigation buttons */
+.carousel-button {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Style the active button */
+.carousel-button.active {
+    background-color: #555;
+}

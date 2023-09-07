@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujata Sahu Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add CSS style for horizontal navigation */
+        header {
+            text-align: center;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between; /* Space the navigation links evenly */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .nav-box {
+            flex: 1; /* Each box takes equal space */
+            padding: 20px; /* Increase padding to make boxes larger */
+            text-align: center;
+            border: 1px solid #333;
+            margin-right: 10px; /* Add margin to create space between boxes */
+            color: #000 !important; /* Set text color to white for better contrast */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0.1, 0.5);
+            border-radius: 70%;
+            overflow: hidden;
+        }
+
+        /* Add unique classes and background images for each box */
+        .nav-box-about {
+            background-image: url("i.jpeg"); /* Add background image URL here */
+            background-size: cover;
+        }
+
+        .nav-box-skills {
+            background-image: url("i.jpeg"); /* Add background image URL here */
+            background-size: cover;
+        }
+
+        .nav-box-projects {
+            background-image: url("i.jpeg"); /* Add background image URL here */
+            background-size: cover;
+        }
+
+        .nav-box-Activities{
+            background-image: url("i.jpeg"); /* Add background image URL here */
+            background-size: cover;
+
+        }
+
+        .nav-box-leisure {
+            background-image: url("i.jpeg"); /* Add background image URL here */
+            background-size: cover;
+        }
+
+    
+
+        /* Style the navigation links */
+        .nav-link {
+            text-decoration: none;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        body {
+            background-image: url("sto.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center; /* Center align text in the body */
+            position: relative; /* Set the body to a relative position */
+        }
+
+        /* Create a pseudo-element for the background overlay */
+        body::before {
+                    content: "";
+                    background: linear-gradient(to bottom left,rgba(173, 216, 230, 1), rgba(173, 216, 230,-5));
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    }
+
+
+        p {
+            font-size: 1.5rem;
+            margin-left: 10rem;
+            margin-right: 10rem;
+            margin-top: 10rem; /* Adjust the top margin as needed */
+            margin-bottom: 10rem;
+            font-weight: normal; /* Make the text bold */
+        }
+
+        h2 {
+            font-size: 3rem; /* Increase font size for the heading */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>SUJATA SAHU</h2>
+        <div class="nav-container">
+            <div class="nav-box nav-box-about">
+                <a href="About.html" class="nav-link">About</a>
+            </div>
+            <div class="nav-box nav-box-skills">
+                <a href="skills.html" class="nav-link">Skills Acquired</a>
+            </div>
+            <div class="nav-box nav-box-projects">
+                <a href="Projects.html" class="nav-link">Projects</a>
+            </div>
+
+            <div class="nav-box nav-box-Activities">
+                <a href="Activities.html" class="nav-link">Activities </a>
+            </div>
+
+            <div class="nav-box nav-box-leisure">
+                <a href="Hobbies.html" class="nav-link">Leisure Pursuit</a>
+            </div>
+        
+            <!-- Add more navigation boxes with unique classes and background images as needed -->
+        </div>
+    </header>
+
+    <!-- Your existing content below the navigation boxes -->
+    <div>
+        <p style="font-size: 1.5rem; margin-left: 15rem; margin-right: 15rem; margin-top: 2rem; margin-bottom: 12rem;">
+            Hello, I'm Sujata Sahu, and I wear many hats—I'm a data scientist, a software engineer, a chef, and a painter. It might seem like a lot, but I'm genuinely passionate about all of these roles! 🚀
+
+            My website is your window into my world. Beyond being a student and a tech enthusiast, I believe in making time for what truly matters. It's all about setting priorities, and I'm here to share the joy of balancing my passions.
+            
+            But let's keep it light-hearted! If you're curious to know more about me, feel free to explore further. 😄"
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Sujata Sahu</p>
+    </footer>
+</body>
+</html>

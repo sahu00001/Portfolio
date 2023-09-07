@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leisure Pursuit</title>
+    <style>
+        body {
+            background-image: url("sto.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center; /* Center align text in the body */
+            overflow: hidden; /* Hide overflow to prevent scrollbar */
+            border: 2px solid black; /* Add a black border around all sides of the page */
+            margin: 20px; /* Adjust margin from all sides to control border distance */
+            padding: 30px;
+        }
+
+        #slideshow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set slideshow container to full viewport height */
+        }
+
+        .slide {
+            display: none;
+        }
+
+        img {
+            max-width: 30rem;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Leisure Pursuit</h2>
+    <p> Hmm, you know, hobbies are funny things. They change over time, but there are a few that have stuck with me, making life all the more joyful. Painting, gardening, and cooking – they're like my trusty companions on this journey called life.
+
+        When I'm painting, it's like diving into a world of endless possibilities. I can take all those wild ideas in my head and turn them into something beautiful, something uniquely mine.
+        
+        Gardening, well, that's my way of finding peace in the chaos of everyday life. It's a reminder that growth takes time, and there's beauty in patience.
+        
+        And then there's cooking, my little adventure in the kitchen. It's where I get to be the mad scientist, experimenting with flavors and creating dishes that make my taste buds dance.
+        
+        So, yeah, my hobbies? They're more than just pastimes; they're a part of what makes life so joyful."
+    </p>
+
+
+
+
+    <div id="slideshow">
+        <div class="slide">
+            <img src="1.jpeg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="2.jpeg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="3.jpeg" alt="Slide 3">
+        </div>
+        <div class="slide">
+            <img src="4.jpeg" alt="Slide 4">
+        </div>
+        <div class="slide">
+            <img src="ganu.jpeg" slt="slide 6">
+        </div>
+        <div class="slide">
+            <img src="g.jpeg" slt="slide 6">
+        </div>
+        <div class="slide">
+            <img src="h.jpeg" slt="slide 6">
+        </div>
+        <div class="slide">
+            <img src="c.jpeg" slt="slide 6">
+        </div>
+        <div class="slide">
+            <img src="bg.jpeg" slt="slide 6">
+        </div>
+        <div class="slide">
+            <img src="5.jpeg" alt="Slide 5">
+        </div>
+    
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.display = 'none';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+            showSlide();
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+            showSlide();
+        }
+
+        // Auto-advance the slideshow every 3 seconds (adjust the time interval as needed)
+        setInterval(nextSlide, 3000);
+
+        // Initial display
+        showSlide();
+    </script>
+</body>
+</html>
